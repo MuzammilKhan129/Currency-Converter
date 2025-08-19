@@ -1,3 +1,6 @@
+// const BASEURL = "https://api.exchangerate.host";
+
+
 
 const dropdowns = document.querySelectorAll(".dropdown select");
 const btn = document.querySelector("form button");
@@ -39,7 +42,7 @@ btn.addEventListener("click", async (evt) => {
     }
 
     try {
-        // const API_KEY = "Replace this with your API key from exchangerate.host";
+        const API_KEY = "a6204b998bc8d2fbcd7cc79505021dd2"; 
         const URL = `https://api.exchangerate.host/convert?access_key=${API_KEY}&from=${fromCurr.value}&to=${toCurr.value}&amount=${amtVal}`;
 
         let response = await fetch(URL);
